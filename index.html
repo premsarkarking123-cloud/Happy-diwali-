@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Diwali Just for You, Devina ✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <canvas id="sky"></canvas>
+  <div class="ambient-glow"></div>
+
+  <!-- Floating Lily-inspired flowers -->
+  <div class="lily-garden" aria-hidden="true">
+    <span class="lily lily-one">❀</span>
+    <span class="lily lily-two">✿</span>
+    <span class="lily lily-three">❀</span>
+    <span class="lily lily-four">✿</span>
+    <span class="lily lily-five">❀</span>
+    <span class="lily lily-six">✿</span>
+  </div>
+
+  <!-- Falling petals are created by JavaScript -->
+  <div class="petal-container" id="petalContainer" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand">A little Diwali magic <span>✦</span></div>
+    <button class="sound-button" id="soundToggle" type="button">♫ Sound: Off</button>
+  </header>
+
+  <main class="site-main">
+
+    <!-- PAGE 1: WELCOME -->
+    <section class="page active" id="welcome">
+      <div class="page-content hero-content">
+        <div class="eyebrow">✦ A LITTLE SURPRISE FOR YOU ✦</div>
+        <div class="hero-diya">🪔</div>
+        <h1>A Diwali just for you,<br><span>Devina.</span></h1>
+        <p class="hero-subtitle">
+          A little light, a little magic, and a whole lot of warm wishes.
+        </p>
+        <p class="tiny-note">Made with care, especially for you ♡</p>
+        <button class="primary-button" data-next type="button">
+          Open your surprise <span>→</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- PAGE 2: PERSONAL LETTER -->
+    <section class="page" id="letter">
+      <div class="page-content">
+        <div class="eyebrow">✦ A NOTE FROM ME ✦</div>
+        <h2>A little letter for <span>you</span></h2>
+
+        <article class="letter-card">
+          <div class="letter-flower">❀</div>
+          <h3>Dear Lily,</h3>
+          <p>
+            This Diwali, I wanted to make something a little different for you.
+            Not just a simple wish, but a small surprise made with time,
+            thought, and lots of care.
+          </p>
+          <p>
+            I hope your days are filled with beautiful moments, your smile
+            stays bright, and every little thing you wish for slowly finds
+            its way to you.
+          </p>
+          <p>
+            Keep shining in your own special way. You deserve happiness,
+            peace, and all the lovely things life has to offer.
+          </p>
+          <p class="letter-sign">With warm wishes, <span>♡</span></p>
+        </article>
+
+        <button class="primary-button" data-next type="button">
+          There's more <span>→</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- PAGE 3: FIVE DIYAS -->
+    <section class="page" id="lights">
+      <div class="page-content">
+        <div class="eyebrow">✦ MAKE A WISH ✦</div>
+        <h2>Light up your <span>Diwali</span></h2>
+        <p class="section-description">
+          Tap each diya and make a little wish.
+        </p>
+
+        <div class="diya-grid">
+          <button class="diya-button" type="button" aria-label="Light diya 1">
+            <span class="flame"></span><span class="diya-bowl">🪔</span>
+          </button>
+          <button class="diya-button" type="button" aria-label="Light diya 2">
+            <span class="flame"></span><span class="diya-bowl">🪔</span>
+          </button>
+          <button class="diya-button" type="button" aria-label="Light diya 3">
+            <span class="flame"></span><span class="diya-bowl">🪔</span>
+          </button>
+          <button class="diya-button" type="button" aria-label="Light diya 4">
+            <span class="flame"></span><span class="diya-bowl">🪔</span>
+          </button>
+          <button class="diya-button" type="button" aria-label="Light diya 5">
+            <span class="flame"></span><span class="diya-bowl">🪔</span>
+          </button>
+        </div>
+
+        <p class="diya-status" id="diyaStatus">0 of 5 diyas glowing ✨</p>
+        <button class="primary-button" data-next type="button">
+          Continue <span>→</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- PAGE 4: WISHES -->
+    <section class="page" id="wish">
+      <div class="page-content">
+        <div class="eyebrow">✦ MY WISHES FOR YOU ✦</div>
+        <h2>May your world <span>glow</span></h2>
+
+        <div class="wish-grid">
+          <div class="wish-card"><span>🌸</span><h3>Happiness</h3><p>May your smile never fade.</p></div>
+          <div class="wish-card"><span>✨</span><h3>New beginnings</h3><p>May beautiful opportunities find you.</p></div>
+          <div class="wish-card"><span>🪷</span><h3>Peace</h3><p>May your heart always feel calm.</p></div>
+          <div class="wish-card"><span>💛</span><h3>Good memories</h3><p>May life give you moments to cherish.</p></div>
+        </div>
+
+        <p class="wish-footer">Wishing you a sparkling and beautiful Diwali, Lily ♡</p>
+        <button class="primary-button" data-next type="button">
+          One last surprise <span>→</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- PAGE 5: MYSTERY GIFT -->
+    <section class="page" id="gift">
+      <div class="page-content">
+        <div class="eyebrow">✦ A LITTLE SOMETHING ✦</div>
+        <h2>There's a gift <span>for you</span></h2>
+        <p class="section-description">Tap the gift box to open it.</p>
+
+        <button class="gift-box" id="giftBox" type="button" aria-label="Open your gift">
+          <span class="gift-glow"></span>
+          <span class="gift-emoji">🎁</span>
+          <span class="gift-hint">Tap me!</span>
+        </button>
+
+        <div class="gift-message" id="giftMessage" aria-live="polite">
+          <h3>A little wish for Lily ♡</h3>
+          <p>
+            May your life be as lovely as the lights of Diwali
+            and as bright as every little star in the sky.
+          </p>
+        </div>
+
+        <button class="primary-button hidden" id="giftContinue" type="button">
+          See your final surprise <span>→</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- PAGE 6: FINALE -->
+    <section class="page" id="finale">
+      <div class="page-content finale-content">
+        <div class="eyebrow">✦ MADE WITH CARE ✦</div>
+        <div class="finale-stars">✦ ✧ ✦</div>
+        <h2>Happy Diwali,<br><span>my dear Lily!</span></h2>
+        <div class="finale-diya">🪔</div>
+        <p>
+          May your life always be filled with light, laughter,
+          peace, and countless reasons to smile.
+        </p>
+        <p class="finale-small">Stay happy. Keep shining. Keep being you. ♡</p>
+        <button class="primary-button" id="replay" type="button">
+          Experience it again ↻
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-dots" id="pageDots" aria-label="Page progress">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+    <div class="footer-note">A little Diwali surprise ♡</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
